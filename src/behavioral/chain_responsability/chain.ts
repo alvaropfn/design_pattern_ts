@@ -11,6 +11,7 @@ abstract class Handler implements IHandler {
     this.nxtHandler = handler;
     return handler;
   }
+
   handle(request: string): string | null {
     if (this.nxtHandler) {
       return this.nxtHandler.handle(request);
